@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: saira;
+    src: url("../assets/fonts/Saira-Regular.ttf");
+    font-weight: 400;
+}
+@font-face {
+    font-family: saira;
+    src: url("../assets/fonts/Saira-Medium.ttf");
+    font-weight: 500;
+}
+@font-face {
+    font-family: saira;
+    src: url("../assets/fonts/Saira-SemiBold.ttf");
+    font-weight: 600;
+}
+@font-face {
+    font-family: saira;
+    src: url("../assets/fonts/Saira-Bold.ttf");
+    font-weight: 700;
+}
+@font-face {
+    font-family: saira;
+    src: url("../assets/fonts/Saira-ExtraBold.ttf");
+    font-weight: 800;
+}
+
+body{
+    font-family: saira , sans-serif;
+}
+
+.walletClass span:first-letter {
+    @apply text-primary-500
+}
+.projectClass span:nth-child(2) {
+    @apply text-primary-500;
+    /*background-color: red;*/
+}
+
+
+.headerChild{
+    @apply flex flex-col gap-y-1 font-semibold justify-center items-center
+}
+.gt{
+    @apply transition-all duration-200
+}
+.gt:has(input:checked){
+    @apply row-span-2
+}
+
+.gt:has(input:checked) .knowMore{
+    @apply hidden
+}
+.gt:has(input:checked) p{
+    display: flex !important;
+}
+
+.gt:has(input:checked) .request{
+    display: block !important;
+}
